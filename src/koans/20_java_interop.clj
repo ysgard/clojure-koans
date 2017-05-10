@@ -12,8 +12,8 @@
   (= ["SELECT" "FROM" "WHERE"] (map clojure.string/upper-case ["select" "from" "where"]))
 
   "Constructing might be harder than breaking"
-  (= 10 (let [latch (java.util.concurrent.CountDownLatch. __)]
+  (= 10 (let [latch (java.util.concurrent.CountDownLatch. 10)]
           (.getCount latch)))
 
   "Static methods are slashing prices!"
-  (== __ (Math/pow 2 10)))
+  (== 1024 (Math/pow 2 10)))
